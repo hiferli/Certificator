@@ -5,7 +5,7 @@ import cv2
 
 class PrintNames:
     
-    def __init__(self , image , text , font , fontScale , color_BRG , thickness , finalName):
+    def __init__(self , image , text , font , fontScale , color_BRG , thickness , finalName , format):
         
         textsize = cv2.getTextSize(str.title(text)  , font, fontScale, thickness)[0];
         # print(textsize);
@@ -14,7 +14,7 @@ class PrintNames:
         
         image = cv2.putText(image, str.title(text) , (textX , textY), font, fontScale, color_BRG, thickness)
 
-        cv2.imwrite(finalName , image);
+        cv2.imwrite(finalName.lower() + "." + format.lower() , image);
         cv2.waitKey(0);
 
     
@@ -45,4 +45,4 @@ So that the file is saved in the image format.
 # >>>>>>>>> Testing the Class
 
 image = cv2.imread("Prototype.png");
-Sample = PrintNames(image , "Ishaan Joshi" , cv2.FONT_HERSHEY_DUPLEX , 4 , (236, 235, 250) , 2 , "joshi.ishaan.2001@gmail.com.png");
+Sample = PrintNames(image , "Ishaan Joshi" , cv2.FONT_HERSHEY_DUPLEX , 4 , (236, 235, 250) , 2 , "joshi.ishaan.2001@gmail.com" , "png");
