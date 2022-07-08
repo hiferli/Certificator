@@ -38,7 +38,7 @@ class Mailing:
             Note: If you change the directory where all the certificates are storing...
             Please change the file directory below
         '''
-        
+
         with open('All Certificates/' + image_name, 'rb') as fp:
             img = MIMEImage(fp.read())
             # Addint the file as attachment
@@ -67,7 +67,7 @@ class Mailing:
 
 # >>>> Testing
 
-sub = "Certificate for Ishaan Joshi";
-text = "Hello World. I hope you are doing well. Here's a certificate which you might like"
-emailSample = Mailing("noreply.iosd@gmail.com" , "joshi.ishaan.2001@gmail.com" , sub , text , "Ishaan Joshi.jpeg")
+# sub = "Certificate for Ishaan Joshi";
+# text = "Hello World. I hope you are doing well. Here's a certificate which you might like"
+# emailSample = Mailing("noreply.iosd@gmail.com" , "joshi.ishaan.2001@gmail.com" , sub , text , "Ishaan Joshi.jpeg")
 

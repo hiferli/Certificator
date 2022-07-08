@@ -49,5 +49,5 @@ class PrintNames:
 
 # >>>>>>>>> Testing the Class
 
-image = cv2.imread("Prototype.png");
-Sample = PrintNames(image , "Ishaan Joshi" , cv2.FONT_HERSHEY_DUPLEX , 4 , (236, 235, 250) , 2 , "jpeg");
+# image = cv2.imread("Prototype.png");
+# Sample = PrintNames(image , "Ishaan Joshi" , cv2.FONT_HERSHEY_DUPLEX , 4 , (236, 235, 250) , 2 , "jpeg");
