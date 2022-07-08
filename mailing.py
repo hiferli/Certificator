@@ -34,7 +34,12 @@ class Mailing:
         message.attach(body_text)
 
         # Adding the image as an attachment in the mail
-        with open(image_name, 'rb') as fp:
+        '''
+            Note: If you change the directory where all the certificates are storing...
+            Please change the file directory below
+        '''
+        
+        with open('All Certificates/' + image_name, 'rb') as fp:
             img = MIMEImage(fp.read())
             # Addint the file as attachment
             img.add_header('Content-Disposition', 'attachment', filename=image_name)
@@ -62,7 +67,7 @@ class Mailing:
 
 # >>>> Testing
 
-sub = "This is another Sample for the mailing part";
+sub = "Certificate for Ishaan Joshi";
 text = "Hello World. I hope you are doing well. Here's a certificate which you might like"
-emailSample = Mailing("noreply.iosd@gmail.com" , "joshi.ishaan.2001@gmail.com" , sub , text , "joshi.ishaan.2001@gmail.com.png")
+emailSample = Mailing("noreply.iosd@gmail.com" , "joshi.ishaan.2001@gmail.com" , sub , text , "Ishaan Joshi.jpeg")
 
