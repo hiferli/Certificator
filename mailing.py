@@ -45,7 +45,6 @@ class Mailing:
             img.add_header('Content-Disposition', 'attachment', filename=image_name)
             message.attach(img)
         
-
         # Connecting to the server for mailing 
         context = ssl.create_default_context()
 
