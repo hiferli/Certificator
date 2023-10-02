@@ -34,6 +34,7 @@ for index , participant in information.iterrows():
     I hope the mail reaches you good and fine. 
     This is the sample working of the script.
 
+
     Please contact {contact_mail} for any issue regarding this certificate.
 
     Regards,

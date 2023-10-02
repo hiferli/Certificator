@@ -42,7 +42,7 @@ class Mailing:
         with open('All Certificates/' + image_name, 'rb') as fp:
             img = MIMEImage(fp.read())
             # Addint the file as attachment
-            img.add_header('Content-Disposition', 'attachment', filename=image_name)
+            img.add_header('Content-Disposition', 'inline', filename=image_name)
             message.attach(img)
         
         # Connecting to the server for mailing 
